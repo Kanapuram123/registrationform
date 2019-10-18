@@ -1,0 +1,50 @@
+<!-- 700 create students.html view inside src/main/resources -> templates folder -->
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>This is message page</title>
+ 
+</head>
+<div style="background-image: url('Springbootv2/images/Screenshot from 2019-09-25 11-36-15.png');">
+You can specify background images<br>
+for any visible HTML element.<br>
+In this example, the background image<br>
+is specified for a div element.<br>
+By default, the background-image<br>
+will repeat itself in the direction(s)<br>
+where it is smaller than the element<br>
+where it is specified. (Try resizing the<br>
+browser window to see how the<br>
+background image behaves.
+</div>
+
+	<!-- https://www.baeldung.com/spring-thymeleaf-3-expressions -->
+	<!-- https://www.baeldung.com/dates-in-thymeleaf -->
+	<!-- https://www.thymeleaf.org/doc/tutorials/2.1/thymeleafspring.html -->
+	<!-- https://www.thymeleaf.org/doc/articles/springmvcaccessdata.html -->
+ 
+	<h1>Welcome to Student page</h1>
+	<h2>The time now is [[${#dates.createNow()}]]</h2>
+	<h3 th:inline="text">[[${msg}]]</h3>
+	<!--<h3 th:inline="text">[[${students}]]</h3>-->
+	<table>
+		<tr>
+		
+			<th>Name</th> 
+			<tr th:each="student : ${students}"><td>[[${student}]]</td>
+		
+		
+		<tr>
+		<th>Id</th> 
+		</tr>
+		
+		
+		<tr  th:each="student : ${studentsid}"><td>[[${student}]]</td>
+		</tr>
+		
+		
+	</table>
+	<img src="https://www.google.com/search?q=images&client=ubuntu&hs=scw&sxsrf=ACYBGNQEUBVGp4BVU924WLW5kRaHPjV6hw:1569920689349&tbm=isch&source=iu&ictx=1&fir=d9twwtl-bE6zKM%253A%252CLlgDpz1LoiuznM%252C_&vet=1&usg=AI4_-kSxk3kBP-TzPTNFM0pAnpRIJ0O0NA&sa=X&ved=2ahUKEwjCkY6o2vrkAhW77HMBHYoNAvsQ9QEwAXoECAUQBg#imgrc=d9twwtl-bE6zKM:" alt="pavan">
+ 
+</body>
+</html>
